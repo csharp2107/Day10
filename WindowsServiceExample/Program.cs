@@ -14,12 +14,24 @@ namespace WindowsServiceExample
         /// </summary>
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
+
+            if (System.Environment.UserInteractive)
             {
-                new Service1()
-            };
-            ServiceBase.Run(ServicesToRun);
+                // test functions of our app
+                MyTimer myTimer = new MyTimer();
+                myTimer.Start();
+                while (true) { }
+
+            }
+            else
+            {
+                ServiceBase[] ServicesToRun;
+                ServicesToRun = new ServiceBase[]
+                {
+                new ServiceTestName()
+                };
+                ServiceBase.Run(ServicesToRun);
+            }
         }
     }
 }

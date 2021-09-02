@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsServiceExample
 {
-    partial class Service1
+    partial class ServiceTestName
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,11 @@ namespace WindowsServiceExample
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            // 
+            // ServiceTestName
+            // 
+            this.ServiceName = "ServiceTestName";
+
         }
 
         #endregion
